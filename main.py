@@ -3,14 +3,6 @@ import requests
 
 app = FastAPI()
 
-@app.get('/api/hello')
-def hello_world():
-    ''' 
-    Endpoit que exibe uma mensagem incrivel no mundo da programação
-
-    '''
-    return {'Hello': 'World'}
-
 @app.get('/api/restaurantes/')
 def get_restaurantes(restaurante: str = Query(None)):
     '''
